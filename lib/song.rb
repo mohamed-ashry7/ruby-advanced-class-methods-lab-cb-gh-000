@@ -28,4 +28,9 @@ class Song
     song.name = sone_name
     song
   end
+  def find
+  end
+  def find_by_name(name)
+
+  end
 end
