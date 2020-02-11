@@ -23,6 +23,7 @@ class Song
     song.name=song_name
     song
   end
+  
   def self.create_by_name(sone_name)
     song = self.create
     song.name = sone_name
@@ -35,6 +36,6 @@ class Song
     end
   end
   def self.find_or_create_by_name(song_name)
-
+    
   end
 end
