@@ -12,18 +12,18 @@ class Song
     self.class.all << self
   end
 
-  def create
+  def self.create
     song = self.new
     save
     song
   end
 
-  def new_by_name(song_name)
+  def self.new_by_name(song_name)
     song = self.new
     song.name=song_name
     song
   end
-  def create_by_name(sone_name)
+  def self.create_by_name(sone_name)
     song = self.create
     song.name = sone_name
     song
@@ -33,6 +33,5 @@ class Song
     self.class.all.find do |song|
       song.name==name
     end
-
   end
 end
