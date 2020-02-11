@@ -52,4 +52,6 @@ class Song
     song.artist_name = arr[0].strip
     song
   end
+  def self.destroy_all
+    self.class.all.clear
 end
