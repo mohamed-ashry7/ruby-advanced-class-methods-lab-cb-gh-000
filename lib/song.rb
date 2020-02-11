@@ -7,12 +7,14 @@ class Song
   end
 
 
+   
+  def save
+    self.class.all << self
+  end
   def create
     song = self.new
     save
     song 
-  def save
-    self.class.all << self
   end
-
+  
 end
