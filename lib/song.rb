@@ -28,9 +28,11 @@ class Song
     song.name = sone_name
     song
   end
-  def find
-  end
-  def find_by_name(name)
 
+  def find_by_name(name)
+    self.class.all.find do |song|
+      song.name==name
+    end
+    
   end
 end
