@@ -47,6 +47,9 @@ class Song
     end
   end
   def self.new_from_filename(format)
-
+    arr = format.split(/[-.]/)
+    song = self.new
+    song.name=arr[1].strip
+    song.artist_name = arr[0].strip
   end
 end
