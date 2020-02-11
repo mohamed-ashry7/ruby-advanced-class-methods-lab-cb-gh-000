@@ -14,7 +14,7 @@ class Song
 
   def self.create
     song = self.new
-    save
+    self.save
     song
   end
 
@@ -46,13 +46,16 @@ class Song
       song.name
     end
   end
+  
   def self.new_from_filename(format)
     arr = format.split(/[-.]/)
     song = self.class.create_by_name(arr[1].strip)
     song.artist_name = arr[0].strip
     song
   end
+  
   def self.destroy_all
     self.class.all.clear
   end
+  
 end
